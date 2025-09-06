@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multimedia — Club 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contenedor responsivo para el iframe */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* Relación 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-description {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="logo">Club 4</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="referentes.html">Referentes</a></li>
+          <li><a href="historias.html">Historias</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Multimedia</h2>
+            <p class="lead">Videos y fotos destacadas.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:320px;">
+          <!-- Video incrustado -->
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/rz_0Wu0Lz-E?si=K9Kwp2K8R4R1c-7P" 
+              title="Video Club 4" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          </div>
+          <!-- Descripción del video -->
+          <div class="video-description">
+            En este video el influencer Westcol habla abiertamente sobre sus ingresos, aclarando dudas y compartiendo su experiencia con sus seguidores.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="small">© 2025 Club 4 — Proyecto Medios Masivos De Comunicación</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

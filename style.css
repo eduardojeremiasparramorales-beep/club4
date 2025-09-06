@@ -1,0 +1,84 @@
+/* style.css - estilos globales para Influencers CO */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Rubik:wght@500;700&display=swap');
+
+:root{
+  --bg-dark:#0D0D0D;
+  --bg-soft:#0f1720;
+  --card:#1a1a1a;
+  --muted:#9aa0a6;
+  --accent-gold:#FFD700;
+  --accent-red:#D72638;
+  --accent-blue:#007BFF;
+  --max-w:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:#fff;background:var(--bg-dark);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* Layout container */
+.container{max-width:var(--max-w);margin:0 auto;padding:28px}
+
+/* NAVBAR */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:#0b0b0b;position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.03)}
+.logo{font-family:Rubik, sans-serif;font-weight:800;color:var(--accent-gold);font-size:20px}
+.nav-links{list-style:none;display:flex;gap:18px;align-items:center;margin:0;padding:0}
+.nav-links a{color:#e9e9e9;font-weight:600}
+.nav-links a:hover{color:var(--accent-gold)}
+.cta{background:var(--accent-gold);color:#000;padding:8px 12px;border-radius:10px;font-weight:700}
+
+/* HERO */
+.hero{background:linear-gradient(90deg,#07243a 0%,#11303f 100%);border-radius:14px;padding:48px;display:flex;gap:24px;align-items:center;margin-top:18px}
+.hero .text{flex:1}
+.hero h1{font-family:Rubik, sans-serif;font-size:34px;margin:0 0 12px;color:#fff}
+.hero p{color:rgba(255,255,255,0.9);margin:0 0 18px}
+.hero .btn{background:var(--accent-gold);color:#000;padding:12px 18px;border-radius:10px;font-weight:800;display:inline-block}
+
+/* SECCIONES */
+.section{margin:36px 0;padding:0}
+.section .section-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}
+.section h2{font-family:Rubik, sans-serif;margin:0;font-size:20px;color:#fff}
+.section p.lead{color:var(--muted);margin-top:6px}
+
+/* CARDS GRID */
+.cards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.card{background:var(--card);border-radius:12px;overflow:hidden;width:320px;box-shadow:0 8px 30px rgba(0,0,0,0.5);display:flex;flex-direction:column}
+.card img{width:100%;height:320px;object-fit:cover;display:block}
+.card .card-content{padding:18px}
+.card h3{margin:0 0 6px;font-size:20px}
+.card p{margin:0 0 12px;color:#d1d5db}
+.followers{font-weight:800;margin-bottom:10px;color:#fff}
+
+/* color stripes por influencer */
+.card.stiven{border-top:5px solid var(--accent-red)}
+.card.westcol{border-top:5px solid var(--accent-blue)}
+.card.liendra{border-top:5px solid var(--accent-gold)}
+
+.btn {display:inline-block;padding:10px 14px;border-radius:8px;font-weight:800;border:2px solid rgba(255,255,255,0.06)}
+.card .btn{border:2px solid rgba(255,255,255,0.08); color: #fff}
+.card .btn:hover{opacity:.95}
+
+/* IMPACTO / KPI */
+.kpi-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.kpi{background:#0b1220;padding:18px;border-radius:10px;flex:1;min-width:160px;text-align:center}
+.kpi strong{display:block;font-size:22px;color:var(--accent-gold)}
+.kpi small{display:block;color:var(--muted);margin-top:6px}
+
+/* MULTIMEDIA */
+.video-placeholder{background:#000;height:260px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+.latest-list{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.post{display:flex;gap:12px;align-items:center;background:#111;padding:10px;border-radius:8px}
+.post img{width:76px;height:76px;object-fit:cover;border-radius:6px}
+
+/* FOOTER */
+footer{margin-top:36px;padding:24px 0;border-top:1px solid rgba(255,255,255,0.03)}
+.footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.small{color:var(--muted);font-size:13px}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{flex-direction:column;padding:28px}
+  .cards{justify-content:center}
+  .kpi-row{flex-direction:column}
+  .nav-links{display:flex;flex-wrap:wrap;gap:10px}
+}
